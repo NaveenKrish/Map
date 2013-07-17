@@ -1,0 +1,39 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class MapExample {
+
+    public static void main(String[] args) {
+
+        Map<Object,String> map=new HashMap<Object, String>();
+
+        map.put(new Integer(2), "Two");
+        map.put(new Integer(1), "One");
+        map.put(new Integer(3), "Three");
+        map.put(new Integer(4), "Four");
+
+        Set set=map.entrySet();
+
+        Iterator iterate=set.iterator();
+
+        while(iterate.hasNext())
+        {
+            
+            Map.Entry m =(Map.Entry)iterate.next();
+         
+            int key=(Integer)m.getKey();
+
+            String value=(String)m.getValue();
+
+            System.out.println("Key :"+key+"  Value :"+value);
+        }
+    }
+}
+
+
+
+
+
+
